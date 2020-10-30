@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Software Credits</title>
+<link rel="icon" href="pics/udacny_smalllogo.png">
+ <style type ="text/css" >
+  @font-face
+{
+font-family: myFancyFont;
+src: url('Segoe UI Light.ttf');
+}
+ 
+ .content {
+	 text-align: center; 
+   	background: rgba(187, 203, 247, 0.75);
+	margin: 0 auto;
+	width: 750px;
+	padding: 10px;
+}
+
+   body{
+   font-family: "myFancyFont", Times, serif;
+   text-align:center;
+   background:#ccd9ff url(pics/background.png) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+   }
+
+
+ul {
+	font-family: "myFancyFont", Times, serif;
+	 margin-top: 0px;
+	margin-left:0px;
+	margin-right: 0px;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffa366;
+text-align: center;
+}
+
+li {
+    display: inline-block;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    background-color: #ffa366;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: white; color: #ffa366;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffa366;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f9f9f9; color: #ffa366;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+
+</head>
+
+</head>
+
+<body oncontextmenu="return false;">
+
+<div style = "background-color: #ffffff">
+<img src = "pics/udacny_logo.png" width = "250" height = "150"/> </div>
+
+<ul>
+  <li><a href="index.html">Home</a></li>
+ <li class="dropdown">
+    <a href="data structure.html" class="dropbtn">3D file structure</a>
+    <div class="dropdown-content">
+      <a href="how_its_done.html">Procedures</a>
+    </div>
+  </li>
+ <li><a href="about us.html">About Us</a></li>
+<li class="dropdown">
+    <a href="printingCompanies.html" class="dropbtn">Printing the Dodecahedron</a>
+    <div class="dropdown-content">
+      <a href="printerCompanies.html">Get a Printer</a>
+      <a href="designCompanies.html">Printing Companies and Websites</a>
+    </div>
+  </li>
+		<li class="dropdown"><a href="zodiac.html"class="dropbtn">Western Zodiac Meanings</a>
+			<div class="dropdown-content">
+
+				<a href="chineseZodiac.html">Chinese Zodiac Meanings</a>
+
+			</div></li>
+<li class="dropdown">
+    <a href="credit.html" class="dropbtn">Credits</a>
+    <div class="dropdown-content">
+      <a href="softwareCredits.html">Software Credits</a>
+      <a href="personalCredits.html">Personal Credits</a>
+    </div>
+  </li>
+
+</ul>
+	<div class="content" id="content">
+		<h2>Software credits</h2>
+		<p>
+			<a href="https://www.mathworks.com/products/matlab/" target="_blank">MATLAB</a> -
+			This is the programming language which was used to created the dodecahedron.
+		</p>
+		<p>
+			<a href="https://pixabay.com/" target="_blank">Pixabey</a> - Black and white zodiac images were taken from
+			Pixabey to be engraved onto the dodecahedron. All of them are labelled "free for
+			commercial reuse", "free of copyrights" and "no attribution
+			required," as seen on the main site. All uncited images in this website were either created by the developers
+			or found from this site.
+			<a href="https://pixabay.com/p-160494/?no_redirect" target="_blank">This picture</a>,
+			for example, was cropped to 12 individual
+			pictures and engraved to the "western" dodecahedron.
+		</p>
+		<p>
+			<a href="http://meshlab.net/" target="_blank">MeshLab</a> - A very
+			helpful software for viewing 3D/STL files. The background image
+			particularly was made possible with the help of this software,
+			lots of screen shots with the snipping tool, and a free photo editing tool on the internet called
+			<a href="https://pixlr.com/editor/" target="_blank">Pixlr</a>. MeshLab also helped
+			with anti-aliasing through a process called <a
+				href="https://graphics.stanford.edu/courses/cs468-01-fall/Papers/taubin-smoothing.pdf" target="_blank">
+				Taubin Smoothing.</a>
+		</p>
+				<p><a href="http://hammerjs.github.io/" target="_blank">Hammer.js</a>
+			- This is an open-source JavaScript library/API used to detect
+			special patterns specifically in touch screen data by the users
+			(where users can use more than one finger for motions as described
+			below). This project used three of the six possible pattern
+			recognitions provided: rotation, pinching, and tapping.
+		</p>
+		<img src="pics/hammer.png" width="750px"/>
+		<p>
+			<a href="https://threejs.org/" target="_blank">Three.js</a> - A
+			specific JavaScript file available online which is also a JavaScript
+			library/API hosted in <a href="https://github.com/mrdoob/three.js/"
+				target="_blank">GitHub</a>, a very popular website for programmers
+			to share their code. Most of the code in this library, if not all,
+			are MIT Licensed and copyrighted "free of charge...without
+			limitations the rights to use, copy, modify, merge, publish,
+			distribute, sublicense, and/or sell copies of the Software...." All
+			of the JavaScript programs taken and used in this project are
+			licensed this way. This program can be credited to put all 3D models
+			onto this website, such as loading "stl" files onto canvases,
+			displaying the canvas, color schemes, lightings, camera position and
+			angle of display, object rotation (on rotating manually or by
+			entering the birthdate), zooming, and displaying a dynamic loading scene.
+		</p>
+
+
+	</div>
+
+</body>

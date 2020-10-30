@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>3D File Structure</title>
+<link rel="icon" href="pics/udacny_smalllogo.png">
+ <style type ="text/css" >
+ @font-face
+{
+font-family: myFancyFont;
+src: url('Segoe UI Light.ttf');
+}
+ 
+.content {
+	width: 750px;
+	background: rgba(187, 203, 247, 0.75);
+	margin: 0 auto;
+	padding: 10px;
+}
+
+   body{
+   font-family: "myFancyFont", Times, serif;
+   text-align:center;
+   background:#ccd9ff url(pics/background.png) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+   }
+
+
+ul {
+    margin-top: 0px;
+	margin-left:0px;
+	margin-right: 0px;
+	font-family: "myFancyFont", Times, serif;
+	list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffa366;
+text-align: center;
+}
+
+li {
+    display: inline-block;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    background-color: #ffa366;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: white; color: #ffa366;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffa366;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f9f9f9; color: #ffa366;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+#PopupOverlay {
+	display: none;
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	background-color: #000000;
+	opacity: .65;
+	z-index: 100;
+}
+
+#PopupWindow {
+	display: none;
+	position: absolute;
+	left: 20%;
+	right: 20%;
+	top: 1%;
+	bottom: 1%;
+		padding-left: 20px;
+	padding-right:20px; 
+	border: solid 1px #000000;
+	background-color: #ffffff;
+	overflow-y: scroll;
+	opacity: 1;
+	z-index: 200;
+}
+
+</style>
+
+</head>
+
+</head>
+
+<body oncontextmenu="return false;">
+
+<div style = "background-color: #ffffff">
+<img src = "pics/udacny_logo.png" width = "250" height = "150"/> </div>
+
+<ul>
+  <li><a href="index.html">Home</a></li>
+ <li class="dropdown">
+    <a href="data structure.html" class="dropbtn">3D file structure</a>
+    <div class="dropdown-content">
+      <a href="how_its_done.html">Procedures</a>
+    </div>
+  </li>
+ <li><a href="about us.html">About Us</a></li>
+<li class="dropdown">
+    <a href="printingCompanies.html" class="dropbtn">Printing the Dodecahedron</a>
+    <div class="dropdown-content">
+      <a href="printerCompanies.html">Get a Printer</a>
+      <a href="designCompanies.html">Printing Companies and Websites</a>
+    </div>
+  </li>
+		<li class="dropdown"><a href="zodiac.html"class="dropbtn">Western Zodiac Meanings</a>
+			<div class="dropdown-content">
+
+				<a href="chineseZodiac.html">Chinese Zodiac Meanings</a>
+
+			</div></li>
+<li class="dropdown">
+    <a href="credit.html" class="dropbtn">Credits</a>
+    <div class="dropdown-content">
+      <a href="softwareCredits.html">Software Credits</a>
+      <a href="personalCredits.html">Personal Credits</a>
+    </div>
+  </li>
+
+</ul>
+	<!-- Import all of the possibly needed  javascript.-->
+		<script src="js\jquery-3.1.1.js" ></script>
+    	<script src="js/three.js"></script>
+    	<script src="http://threejs.org/build/three.min.js"></script>
+    			<script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+        <script src="http://threejs.org/examples/js/loaders/STLLoader.js"></script>
+		<script type="text/javascript" src="js/TrackBallController.js"> </script>
+		<script type="text/javascript" src="js/FileSaver.js"> </script>
+		<script type="text/javascript" src="js/STLExporter.js"> </script>
+		<script type="text/javascript" src="js/filereader.js"> </script>
+		<script type="text/javascript" src="js/ForButtons.js"> </script>
+			<script type="text/javascript" src="js/renderSTL.js"> </script>
+
+
+	<div class="content" id="content">
+		<h2>3D File Structure</h2>
+		<p>
+			In order to store a shape, the computer uses a file format
+			called ".stl." This is similar to ".txt," ".mp3," or ".jpg." This
+			file is basically many triangles linked together that form an
+			enclosed surface. This enclosed surface encloses a volume, and thus
+			defines a 3D object. Usually a surface of an object would be
+			"cut up" into triangles to be stored as an stl file. To see the whole
+			procedure on how our dodecahedron was cut-up, modified, and
+			linked back together, see <a
+				href="how_its_done.html"> procedures</a>.
+		</p>
+		<p>The shape is stored using two arrays called meshes. The first
+			array is a vertices list. Essentially, it is a 'n' by 3 array, with 'n'
+			representing the number of vertices the dodecahedron has. Each row
+			represents a vertex, and since it is in 3D space, it takes 3 numbers
+			to represent the coordinate of the specific vertex. The index of each
+			row would conveniently be the ID number of the vertex it corresponds to.</p>
+		<p>On the second mesh, the file is a 'k' by 3 array. Each row of
+			this mesh represents a triangle, with 'k' representing the number of triangles
+			the dodecahedron has. Each row has 3 positive integers which
+			represent the ID numbers of 3 specific vertices, and the 3 vertices
+			are then linked together to form a triangle. In this mesh, vertices
+			are often used more than once in different triangles, in fact it is
+			specifically through this that the triangles are linked together, without a "leak", to form a larger surface and eventually
+			loop around and enclose a volume to form a polyline!</p>
+		<p>The end result is modified automatically by
+			linking the points with conceptual "wires" to form triangles. The
+			triangles assume a surface, and the triangle surfaces link together
+			and wrap around to enclose a space. The enclosed space's volume is 
+			filled with material so that it has a solid structure when the mesh
+			is 3D printed. However, to understand the data structure, it is
+			important to see the object in its most original form (the dots that
+			connect to make the wires, which connect to make the triangle, which 
+			connect to make the shape)<strong>:</strong></p>
+			<h3 id="zodiac" style=" display: inline;background-color: #ccff00;">
+				<mark id="zodiacMark">
+					Try spinning the 3D models with your mouse/fingers. <a href="#" onclick="openPopUp();">
+						(click here for controls documentation)</a>
+				</mark>
+			</h3>
+			<br> <br>
+
+
+
+		</div>
+		<div onclick="closePopUp();" class="PopupOverlay" id="PopupOverlay">
+
+
+		</div>
+		<div class="PopupWindow" id="PopupWindow">
+			<h1 style="text-align: left">Controls Documentation</h1>
+
+			<p style="text-align: left">
+				<b>Note:</b> Click anywhere in the gray area or press Esc to close
+				this pop-up.
+			</p>
+
+			<br>
+			<h2 style="text-align: left">Mouse:</h2>
+
+			<p style="text-align: left">
+				<b>Left Mouse Button drag:</b> Spins the dodecahedron about the axis
+				orthogonal to the direction of your mouse, parallel to the screen,
+				and passes through the center of the decahedron.
+			</p>
+
+			<p style="text-align: left">
+				<b>Right Mouse Button drag:</b> Spins the dodecahedron about the
+				axis orthogonal to the screen and passes through the center of the
+				dodecahedron (i.e. the axis pointing out towards you).
+			</p>
+
+			<p style="text-align: left">
+				<b>Scroll:</b> Shrinks/expands the dodecahedron.
+			</p>
+
+			<p style="text-align: left">
+				<b>Fast double click</b><i> (Only applicable when the
+					dodecahedron is rotating towards your zodiac)</i>:</b> Dodecahedron skips
+
+				the animation and goes directly to your zodiac.
+			</p>
+
+			<h2 style="text-align: left">Touchscreen:</h2>
+
+			<p style="text-align: left">
+				<b>Swipe:</b> Spins the dodecahedron about the axis orthogonal to
+				the direction of your mouse, parallel to the screen, and passes
+				through the center of the dodcahedron (same as LMB drag).
+			</p>
+
+
+			<p style="text-align: left">
+				<b>Two finger rotation</b><i> (Works In Progress)</i>:</b> Spins the
+				dodecahedron about the axis orthogonal to the screen and passes
+				through the center of the dodecahedron (i.e. the axis pointing out
+				towards you).
+			</p>
+
+			<p style="text-align: left">
+				<b>Pinch in/out</b> <i>(Works In Progress):</i></b> Shrinks/expands the
+				dodecahedron.
+			</p>
+
+			<p style="text-align: left">
+				<b>Fast double tap</b> <i>(Only applicable when the dodecahedron
+					is rotating towards your zodiac)</i><b>:</b> Dodecahedron skips the
+
+				animation and goes directly to your zodiac.
+			</p>
+		</div>
+		<script>
+			forButtons('UltraSmall', 1, true)
+		</script>
+
+</body>
+</html>

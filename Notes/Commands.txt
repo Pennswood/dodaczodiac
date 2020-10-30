@@ -1,0 +1,26 @@
+Controls Documentation
+
+Note: Click anywhere in the gray area or press Esc to close this pop-up.
+
+
+Mouse:
+
+Left Mouse Button drag: Spins the dodecahedron about the axis orthogonal to the direction of your mouse,  parallel to the screen, and passes through the center of the decahedron.
+
+Right Mouse Button drag: Spins the dodecahedron about the axis orthogonal to the screen and passes through the center of the dodecahedron (i.e. the axis pointing out towards you).
+
+Scroll: Strinks/expands the dodecahedron. 
+
+Fast double click (Only applicable when the dodecahedron is rotating towards your zodiac): Dodecahedron skips the animation and goes directly to your zodiac.
+
+Touchscreen:
+
+Swipe: Spins the dodecahedron about the axis orthogonal to the direction of your mouse, parallel to the screen, and passes through the center of the dodcahedron (same as LMB drag).
+
+
+Two finger rotation (Works In Progress): Spins the dodecahedron about the axis orthogonal to the screen and passes through the center of the dodecahedron (i.e. the axis pointing out towards you).
+
+Pinch in/out (Works In Progress): Strinks/expands the dodecahedron. 
+
+Fast double tap (Only applicable when the dodecahedron is rotating towards your zodiac): Dodecahedron skips the animation and goes directly to your zodiac.
+

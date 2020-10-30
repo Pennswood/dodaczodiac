@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Test</title>
+        
+    </head>
+
+    <body>
+		<!-- Import all of the possibly needed  javascript.-->
+    	<script src="http://threejs.org/build/three.min.js"></script>
+        <script src="http://threejs.org/examples/js/loaders/STLLoader.js"></script>
+		<script type="text/javascript" src="js/renderSTL.js"> </script>
+		<script type="text/javascript" src="js/TrackBallController.js"> </script>
+		<script type="text/javascript" src="js/FileSaver.js"> </script>
+		<script type="text/javascript" src="js/STLExporter.js"> </script>
+		<script type="text/javascript" src="js/filereader.js"> </script>
+		<script type="text/javascript" src="js/ForButtons.js"> </script>
+		
+		<!-- The buttons -->
+
+		<h4>Choose the prefered zodiac catagory:</h4>
+		<button type='button' id='original' onClick="forButtons('original');"> western</button>
+		<button type='button' id='chinese'onClick="forButtons('chinese');"> chinese</button>
+		</br>
+		<h4 id="Date of birth" style="display:none">Please enter your date of birth:</h4><h2 id="slashes" style="display:none">
+		<textarea id = "date" rows = "1" cols = "3" placeholder="date" style="display:none"></textarea> /
+		<textarea id = "month" rows = "1" cols = "3" placeholder="month" style="display:none"></textarea>/
+		<textarea id = "year" rows = "1" cols = "6" placeholder="year" style="display:none"></textarea>
+		<button type='button' id='OK'onClick="moveCam();"> OK</button></h2></br></br>
+        
+
+
+
+    </body>
+</html>	

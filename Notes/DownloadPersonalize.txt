@@ -1,0 +1,21 @@
+STL File Documentation
+Note: Click anywhere in the gray area or press Esc to close this pop-up.
+
+
+You now own the soft copies of a personalized dodecahedron with your name carved onto your zodiac.
+
+Well first lets first see the dodecahedron on your local computer:
+
+If you do not already have a 3D file viewer, download one, such as MeshLab (more simple to use) or Blender (more advanced). 
+Set it as default for viewing STL files so that the default won't be a text file, which might show you gibberish (or at least gibberish to human beings).
+
+In order to ensure that the viewer works correctly, please click the arrow pointing up, and then show in folder (or just find the file in your "downloads" folder).
+Open the file and enjoy.
+
+However, to actually have one in your hands, you could either print one out of your own printer (if you have one) or upload the dodecahedron onto certain websites and have them print it out for you. 
+
+In the event that you have your own printer, the printer should have software link for you to open the file and send the file to your printer to be printed (usually through wifi). If you wish to browse different 3D printers avaliable for the general household, click here.
+
+In the even that you would like someone else to print your dodecahedron, you can visit professional websites as discussed here, which prints your files usually with premium quality, color, size, and material at your choice. These companies then ship the printed product to you. 
+
+There might also be other (usually cheaper) alternatives in your local area. For example, our school and our library both offer 3D printing service at low cost (printer bought originally for teenager STEM lab programs), as seen here.
